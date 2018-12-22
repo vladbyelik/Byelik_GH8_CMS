@@ -1,3 +1,50 @@
+.design-code {
 
+  background-image: url("../img/design.png");
+  padding: 170px 0;
 
+  .container {
+    display: flex;
+    flex-direction: column;
 
+    @media (min-width: 1300px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.best-design-code {
+  max-width: 570px;
+}
+
+.what-we-do {
+  padding: 104px 0;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+.pic {
+  display: flex;
+  flex-direction: column;
+}
+
+.drone-zone, .monthly, .fit-app {
+  max-width: 641px;
+  height: 481px;
+}
+
+.drone-zone {
+  background-image: url("../img/Layer_12");
+}
+
+.monthly {
+  background-image: url("../img/template.png");
+}
+
+.fit-app {
+  background-image: url("../img/green.png");
+}

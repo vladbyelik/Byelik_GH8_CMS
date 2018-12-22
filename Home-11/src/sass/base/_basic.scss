@@ -1,0 +1,25 @@
+a {
+  color: #ffffff                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.link {
+  width: 205px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  background-image: linear-gradient(74deg, #49007c 0%, #e70088 100%);
+  display: flex;
+  align-items: center;
+  a {
+    margin: 0 auto;
+  }
+}
