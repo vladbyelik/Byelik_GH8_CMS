@@ -1,3 +1,16 @@
 footer {
-
+  padding: 66px 0;
+  height: 700px;
+  span {
+    text-align: center;
+    color: #a7acbc;
+    line-height: 36px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 18px;
+    }
+    strong {
+      font-weight: 800;
+    }
+  }
 }

@@ -1,40 +1,163 @@
 .design-code {
-
-  background-image: url("../img/design.png");
-  padding: 170px 0;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: 1300px) {
-      flex-direction: row;
-      justify-content: space-between;
+  background: {
+    image: url("../img/design.png");
+    repeat: no-repeat;
+    position: top center;
+    size: cover;
+  }
+  @media (max-width: 1200px) {
+    .container {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
 
 .best-design-code {
-  max-width: 570px;
+  color: #ffffff;
+  width: 550px;
+  h2 {
+    width: 237px;
+    height: 42px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 36px;
+    strong {
+      font-weight: 800;
+    }
+  }
+  span {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 41px;
+  }
+  @media (max-width: 1200px) {
+    margin-top: 40px;
+  }
 }
 
 .what-we-do {
-  padding: 104px 0;
+  h2 {
+    color: #000000;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  .link {
+    margin-top: 111px;
+  }
 }
 
 .services {
+  h3 {
+    color: #000000;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  li {
+    width: 576px;
+    height: 127px;
+    @media (max-width: 1200px) {
+      margin-top: 50px;
+    }
+  }
+  span {
+    color: #949494;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  .text {
+    max-width: 430px;
+    margin-left: 30px;
+  }
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 }
 
-.pic {
-  display: flex;
-  flex-direction: column;
+.about-us {
+  background: {
+    image: url("../img/bgrnd-aboutus.png");
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+  h2 {
+    color: #ffffff;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  h3 {
+    max-width: 700px;
+    color: #949494;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 38px auto 132px;
+  }
+  h4 {
+    color: #ffffff;
+    font-family: Roboto, serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 30px 0;
+  }
+  span {
+    color: #949494;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+
+.personal {
+  flex-wrap: wrap;
+  li {
+    width: 100%;
+  }
+}
+
+.map {
+  background: {
+    image: url("../img/map.png");
+    position: center;
+    size: cover;
+  }
+  height: 600px;
 }
 
 .drone-zone, .monthly, .fit-app {
-  max-width: 641px;
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+  width: 641px;
   height: 481px;
+  &:hover {
+    .info {
+      display: block;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+  }
 }
 
 .drone-zone {
@@ -47,4 +170,42 @@
 
 .fit-app {
   background-image: url("../img/green.png");
+}
+
+.notebook, .web-app, .painting, .desktop-apps {
+  width: 136px;
+  height: 102px;
+  background: {
+    repeat: no-repeat;
+    position: center;
+  }
+}
+
+.notebook {
+  background-image: url("../img/notebook");
+}
+
+.web-app {
+  background-image: url("../img/web-applications.png");
+}
+
+.painting {
+  background-image: url("../img/painting");
+}
+
+.desktop-apps {
+  background-image: url("../img/desctop-app");
+}
+
+.info {
+  width: 387px;
+  margin: 0 auto;
+  color: #ffffff;
+  display: none;
+  h2 {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
 }

@@ -1,21 +1,50 @@
+h1 {
+  color: #000000;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 220px;
+}
+
 header {
-  background-image: url("../img/bgrnd1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: black;
   padding: 55px 0 255px;
 
-  nav {
-    display: flex;
-    justify-content: space-between;
+  h2 {
+    color: #949494;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 64px;
   }
-
+  background: {
+    image: url("../img/bgrnd1.png");
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+    color: black;
+  }
+  nav div ul li {
+    a {
+      color: #000000;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    :hover{
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
   span {
     color: #ffffff;
-    font-family: "Proxima Nova";
-    font-size: 14px;
-    font-weight: 300;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 14px;
+      weight: 300;
+    }
     line-height: 18px;
     display: block;
     text-align: center;
@@ -26,5 +55,13 @@ header {
   background-image: url("../img/mouse.png");
   width: 25px;
   height: 43px;
-  margin: 0 auto;
+  margin: 419px auto 0;
+}
+
+.scroll {
+  color: #ffffff;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
 }
