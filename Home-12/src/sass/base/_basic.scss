@@ -1,0 +1,23 @@
+.calc {
+  width: 620px;
+  height: 620px;
+  background-color: grey;
+  border: 2px solid black;
+  border-radius: 5%;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border-radius: 15%;
+  outline: none;
+}
+
+p {
+  width: 320px;
+  height: 30px;
+  color: #ffffff;
+  border: 2px solid black;
+}
