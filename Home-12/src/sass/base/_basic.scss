@@ -1,23 +1,32 @@
+button {
+  width: 120px;
+  height: 100px;
+  border-radius: 15px;
+  font-size: 40px;
+  margin-top: 15px;
+}
+
 .calc {
   width: 620px;
   height: 620px;
   background-color: grey;
   border: 2px solid black;
   border-radius: 5%;
+  padding: 65px 75px 0;
 }
 
 input {
+  font-size: 40px;
+  width: 215px;
+  height: 50px;
   outline: none;
-}
-
-button {
-  border-radius: 15%;
-  outline: none;
+  border-radius: 15px;
 }
 
 p {
-  width: 320px;
-  height: 30px;
+  width: 400px;
+  height: 62px;
   color: #ffffff;
-  border: 2px solid black;
+  margin: 30px auto;
+  font-size: 40px;
 }
