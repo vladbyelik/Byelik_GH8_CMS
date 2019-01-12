@@ -9,16 +9,20 @@
 </head>
 <body>
 <div class="calc m-auto">
-    <label class="d-flex justify-content-between">
-        <input class="text-center" type="number" id="value1">
-        <input class="text-center" type="number" id="value2">
-    </label>
+    <div  class="d-flex justify-content-between">
+        <label>
+            <input class="text-center" type="number" id="value1">
+        </label>
+        <label>
+            <input class="text-center" type="number" id="value2">
+        </label>
+    </div>
     <div class="d-flex justify-content-between flex-wrap">
         <button onclick="plus()">+</button>
         <button onclick="minus()">-</button>
         <button onclick="multiply()">*</button>
         <button onclick="divide()">/</button>
-        <button onclick="power()">x<sup>n</sup></button>
+        <button onclick="power()">x<sup>2</sup></button>
         <button class="icon-math" onclick="sqrt()"></button>
         <button onclick="sin()">sin</button>
         <button onclick="cos()">cos</button>
