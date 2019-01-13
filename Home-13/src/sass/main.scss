@@ -7,30 +7,3 @@
 @import 'layout/footer';
 
 @import 'pages/home';
-
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-size: 1rem;
-  padding: 1rem;
-}
-
-.task-list {
-  li {
-    &:hover {
-      background-color: rgba(0, 108, 255, 0.31);
-    }
-
-    .body {
-      display: flex;
-      padding: .5rem;
-
-      .text {
-        flex: 1;
-      }
-    }
-  }
-}

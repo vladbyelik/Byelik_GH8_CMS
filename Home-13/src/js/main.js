@@ -29,22 +29,15 @@ const createListItem = (text) => {
 };
 
 $(window).on('load', () => {
-
   $('#add-task-form').on('submit', ev => {
     const textArea = $(ev.target).find('#task-name');
     const taskName = textArea.val();
-
     if (!taskName) {
       ev.preventDefault();
       return;
     }
-
     $('#task-list').append(createListItem(taskName));
     textArea.val('');
-
     ev.preventDefault();
   });
-
-
-
 });
