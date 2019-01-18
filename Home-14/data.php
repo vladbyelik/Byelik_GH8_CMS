@@ -44,13 +44,15 @@ return [
             placerat fermentum.',
 
         'h4' => 'John Doe',
+
+        'span' => 'Curabitur ullamcorper auctor mauris, placerat fermentum.',
+
         'img' => [
             'assets/img/ph1.png',
             'assets/img/ph2.png',
             'assets/img/ph3.png',
             'assets/img/ph4.png',
-            ],
-        'span' => 'Curabitur ullamcorper auctor mauris, placerat fermentum.',
+        ],
     ],
 
     'footer' => [

@@ -119,33 +119,10 @@ $data = require('data.php');
         <h2><?= $data['about-us']['h2'] ?></h2>
         <h3><?= $data['about-us']['h3'] ?></h3>
 
-<!--        <ul class="personal d-flex justify-content-between">-->
-<!--            <li>-->
-<!--                <img src="assets/img/ph1.png" alt="per1">-->
-<!--                <h4>John Doe</h4>-->
-<!--                <span>Curabitur ullamcorper auctor mauris, placerat fermentum.</span>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <img src="assets/img/ph2.png" alt="per2">-->
-<!--                <h4>John Doe</h4>-->
-<!--                <span>Curabitur ullamcorper auctor mauris, placerat fermentum.</span>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <img src="assets/img/ph3.png" alt="per3">-->
-<!--                <h4>John Doe</h4>-->
-<!--                <span>Curabitur ullamcorper auctor mauris, placerat fermentum.</span>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <img src="assets/img/ph4.png" alt="per4">-->
-<!--                <h4>John Doe</h4>-->
-<!--                <span>Curabitur ullamcorper auctor mauris, placerat fermentum.</span>-->
-<!--            </li>-->
-<!--        </ul>-->
-
         <ul class="personal d-flex justify-content-between">
             <?php foreach ($data['about-us']['img'] as $people): ?>
                 <li>
-                    <img alt="per" src="<?php echo $data['about-us']['img']?>">
+                    <img alt="per" src="<?php echo $people?>">
                     <h4><?= $data['about-us']['h4'] ?></h4>
                     <span><?= $data['about-us']['span'] ?></span>
                 </li>
