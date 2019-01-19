@@ -19,20 +19,24 @@
   h2 {
     width: 237px;
     height: 42px;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 48px;
-    font-weight: 300;
     line-height: 36px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 48px;
+      weight: 300;
+    }
     strong {
       font-weight: 800;
     }
   }
   span {
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
     line-height: 30px;
     margin-bottom: 41px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 18px;
+      weight: 300;
+    }
   }
   @media (max-width: 1200px) {
     margin-top: 40px;
@@ -42,10 +46,12 @@
 .what-we-do {
   h2 {
     color: #000000;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
     line-height: 36px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 48px;
+      weight: 700;
+    }
   }
   .link {
     margin-top: 111px;
@@ -55,10 +61,12 @@
 .services {
   h3 {
     color: #000000;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 30px;
-    font-weight: 700;
     line-height: 36px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 30px;
+      weight: 700;
+    }
   }
   li {
     width: 576px;
@@ -69,10 +77,12 @@
   }
   span {
     color: #949494;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
     line-height: 30px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 18px;
+      weight: 300;
+    }
   }
   .text {
     max-width: 430px;
@@ -94,36 +104,48 @@
     position: center;
     size: cover;
   }
+
   h2 {
     color: #ffffff;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
     line-height: 36px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 48px;
+      weight: 700;
+    }
   }
+
   h3 {
     max-width: 700px;
     color: #949494;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
     line-height: 30px;
     margin: 38px auto 132px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 18px;
+      weight: 300;
+    }
   }
+
   h4 {
     color: #ffffff;
-    font-family: Roboto, serif;
-    font-size: 24px;
-    font-weight: 700;
     line-height: 36px;
     margin: 30px 0;
+    font: {
+      family: Roboto, serif;
+      size: 24px;
+      weight: 700;
+    }
   }
+
   span {
     color: #949494;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
     line-height: 30px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 18px;
+      weight: 300;
+    }
   }
 }
 
@@ -203,9 +225,11 @@
   color: #ffffff;
   display: none;
   h2 {
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 30px;
-    font-weight: 700;
     line-height: 36px;
+    font: {
+      family: "Proxima Nova", sans-serif;
+      size: 30px;
+      weight: 700;
+    }
   }
 }

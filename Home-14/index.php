@@ -25,16 +25,13 @@ $data = require('data.php');
                 </ul>
             </div>
         </nav>
-
         <h1 class="text-center"><?= $data['header']['h1']; ?></h1>
         <h2 class="text-center"><?= $data['header']['h2']; ?></h2>
         <div class="link ml-auto mr-auto"><?= $data['button']; ?></div>
         <div class="mouse ml-auto mr-auto"></div>
         <span class="scroll"><?= $data['header']['scroll']?></span>
-
     </div>
 </header>
-
 <section class="design-code">
     <div class="container d-flex justify-content-between">
         <div class="best-design-code">
@@ -42,7 +39,6 @@ $data = require('data.php');
             <span><?= $data['design-section']['span'] ?></span>
             <div class="link"><?= $data['button']; ?></div>
         </div>
-
         <div class="best-design-code">
             <h2><?= $data['design-section']['h2-code'] ?></h2>
             <span><?= $data['design-section']['span'] ?></span>
@@ -50,7 +46,6 @@ $data = require('data.php');
         </div>
     </div>
 </section>
-
 <section class="what-we-do">
     <div class="container">
         <h2 class="text-center">What we do?</h2>
@@ -89,7 +84,6 @@ $data = require('data.php');
         <div class="link mr-auto ml-auto"><?= $data['button']; ?></div>
     </div>
 </section>
-
 <section class="pic d-flex justify-content-center">
     <div class="drone-zone d-flex align-items-center">
         <div class="info text-center">
@@ -113,12 +107,10 @@ $data = require('data.php');
         </div>
     </div>
 </section>
-
 <section class="about-us text-center">
     <div class="container">
         <h2><?= $data['about-us']['h2'] ?></h2>
         <h3><?= $data['about-us']['h3'] ?></h3>
-
         <ul class="personal d-flex justify-content-between">
             <?php foreach ($data['about-us']['img'] as $people): ?>
                 <li>
@@ -131,18 +123,14 @@ $data = require('data.php');
         <div class="link mr-auto ml-auto"><?= $data['button'] ?></div>
     </div>
 </section>
-
-<section class="map"></section>
-
+<div class="map"></div>
 <footer>
     <div class="container">
         <span class="d-block"><?= $data['footer']['span'] ?></span>
         <span class="d-block"><?= $data['footer']['span-end']?></span>
     </div>
 </footer>
-
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
