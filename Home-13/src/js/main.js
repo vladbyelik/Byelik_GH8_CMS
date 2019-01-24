@@ -3,7 +3,6 @@ const listItemTemplate = (text) => {
     <li contenteditable="false">
         <div class="body">
           <span class="text">${text}</span>
-
           <div class="manage">
             <span class="edit">
               <i class="fas fa-pencil-alt"></i>
