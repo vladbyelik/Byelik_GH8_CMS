@@ -8,17 +8,16 @@
 <body>
 
 <?php
-    require "assets/libs/rb.php";
+    require "libs/rb.php";
     R::setup( 'mysql:host=localhost;dbname=database-home16',
         'root', '' );
 
     $queries = [
-            R::getAll(file_get_contents('assets/db-queries/query1.sql')),
-            R::getAll(file_get_contents('assets/db-queries/query2.sql')),
-            R::getAll(file_get_contents('assets/db-queries/query3.sql')),
-            R::getAll(file_get_contents('assets/db-queries/query4.sql'))
+            R::getAll(file_get_contents('db-queries/query1.sql')),
+            R::getAll(file_get_contents('db-queries/query2.sql')),
+            R::getAll(file_get_contents('db-queries/query3.sql')),
+            R::getAll(file_get_contents('db-queries/query4.sql'))
     ];
-
 
     function rowsToHTML($rows = []) {
         $html = '<table>';

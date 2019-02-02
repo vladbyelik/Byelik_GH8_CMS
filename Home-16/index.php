@@ -10,7 +10,7 @@
 <h1 class="text-center">Registration</h1>
 
 <?php
-    require "assets/libs/rb.php";
+    require "libs/rb.php";
     R::setup( 'mysql:host=localhost;dbname=database',
         'root', '' );
     $data = $_POST;
