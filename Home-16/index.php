@@ -1,15 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<h1 class="text-center">Registration</h1>
+
 <?php
-
-
-    require "rb.php";
+    require "assets/libs/rb.php";
     R::setup( 'mysql:host=localhost;dbname=database',
         'root', '' );
-
     $data = $_POST;
     if(isset($data['do_sign-up'])) {
-
         $errors = array();
-
         if (trim($data['username']) == '' ) {
             $errors[] = 'Enter username!';
         }
@@ -23,7 +29,7 @@
         }
 
         if (trim($data['repeat-password']) != $data['password'] ) {
-            $errors[] = 'Password is not correctly! ';
+            $errors[] = 'Passwords do not match!';
         }
 
         if (trim($data['firstname']) == '' ) {
@@ -39,17 +45,14 @@
         }
 
         if (R::count('users', "username = ?", array($data['username'])) > 0 ) {
-            $errors[] = 'User uzhe takoy login bil!';
+            $errors[] = 'User with such login already exists!';
         }
 
         if (R::count('users', "email = ?", array($data['email'])) > 0 ) {
-            $errors[] = 'User uzhe takoy email bil!';
+            $errors[] = 'User with such email already exists!';
         }
 
-
-
         if (empty($errors)) {
-
             $user = R::dispense('users');
             $user->username = $data['username'];
             $user->email = $data['email'];
@@ -59,27 +62,13 @@
             $user->age = $data['age'];
             $user->gender = $data['gender'];
             R::store($user);
-            echo '<div id="errors" style="color: green;">You are molodets!</div>';
-
+            echo '<div style="color: green;" class="text-center">You have successfully registered!</div>';
         } else {
-            echo '<div id="errors" style="color: red;">'.array_shift($errors).'</div>';
+            echo '<div style="color: red;" class="text-center">'.array_shift($errors).'</div>';
         }
-
     }
-
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-
-<h1 class="text-center">Registration</h1>
 <div class="container">
     <form action="index.php" method="POST" class="d-flex flex-lg-column">
         <label>
@@ -109,15 +98,13 @@
             <span>Female </span><input type="radio" name="gender" value="female">
         </label>
         <label>
-            <input type="submit" value="submit" name="do_sign-up">
+            <input type="submit" value="Registration" name="do_sign-up">
         </label>
     </form>
-
-    <p>
+    <p class="text-center">
         HomeTask <a href="part2.php">part 2</a>
     </p>
 </div>
-
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
