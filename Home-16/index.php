@@ -10,9 +10,14 @@
 <h1 class="text-center">Registration</h1>
 
 <?php
+
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     require "libs/rb.php";
-    R::setup( 'mysql:host=localhost;dbname=database',
-        'root', '' );
+    R::setup( 'mysql:host=localhost;dbname=home16',
+        'root', 'yes' );
     $data = $_POST;
     if(isset($data['do_sign-up'])) {
         $errors = array();

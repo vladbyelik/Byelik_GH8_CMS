@@ -9,8 +9,8 @@
 
 <?php
     require "libs/rb.php";
-    R::setup( 'mysql:host=localhost;dbname=database-home16',
-        'root', '' );
+    R::setup( 'mysql:host=localhost;dbname=home16',
+        'root', 'yes' );
 
     $queries = [
             R::getAll(file_get_contents('db-queries/query1.sql')),

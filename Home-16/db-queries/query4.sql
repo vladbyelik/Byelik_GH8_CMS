@@ -1,3 +1,3 @@
-select name
-from variable
-where name like 'cache_%';
+SELECT NAME
+FROM variable
+WHERE NAME LIKE 'cache_%';

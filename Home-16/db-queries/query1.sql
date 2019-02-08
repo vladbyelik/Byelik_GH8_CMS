@@ -1,4 +1,4 @@
-select *
-from block
-where theme = 'bartik'
-    and module = 'system';
+SELECT *
+FROM block
+WHERE theme = 'bartik'
+    AND MODULE = 'system';

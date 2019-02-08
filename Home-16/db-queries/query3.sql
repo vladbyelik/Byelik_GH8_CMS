@@ -1,5 +1,5 @@
-select users.name, users.mail, node.*
-from users
-    inner join node on users.uid = node.uid
-where users.name = 'serhiy'
+SELECT users.name, users.mail, node.*
+FROM users
+    INNER JOIN node ON users.uid = node.uid
+WHERE users.name = 'serhiy'
 limit 20;
