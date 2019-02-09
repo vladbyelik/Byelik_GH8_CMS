@@ -6,45 +6,7 @@ label {
   display: block;
 }
 
-.container {
-  margin-bottom: 5vh;
-}
-
-.input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 80%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-  text-align: center;
-}
-
-.textarea {
-  height: 50vh;
-  text-align: start;
-  resize: none;
-}
-
-.post {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2vh;
-  margin-top: 2vh;
-  overflow-x: hidden;
-  h3 {
-    text-align: start;
-  }
-
-  p {
-    text-align: start;
-  }
-}
-
-.login-page {
+.input-block {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -54,9 +16,24 @@ label {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
-  h1, h2 {
+  h1 {
     margin: 2vh 0 5vh;
-    font-size: 8vh;
+    font-size: 7vh;
+  }
+  h2 {
+    margin: 2vh 0 5vh;
+    font-size: 6vh;
+  }
+}
+
+.post {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2vh;
+  margin-top: 2vh;
+  overflow-x: hidden;
+  h3, p {
+    text-align: start;
   }
 }
 
@@ -74,22 +51,4 @@ label {
   :hover,.form button:active,.form button:focus {
     background: #43A047;
   }
-
-}
-
-.login {
-  width: 90vh;
-}
-
-.links {
-
-  margin-top: 3vh;
-
-  a {
-    margin-top: 1vh;
-  }
-}
-
-.echo {
-  margin: 2vh;
 }
