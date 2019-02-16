@@ -1,0 +1,129 @@
+<?php
+// $Id: ckeditor_link.module,v 1.5 2010/12/29 18:13:02 anrikun Exp $
+
+/**
+ * @file
+ * Written by Henri MEDOT <henri.medot[AT]absyx[DOT]fr>
+ * http://www.absyx.fr
+ */
+
+/**
+ * Implementation of hook_init().
+ */
+function ckeditor_link_init() {
+  if (!variable_get('clean_url', 0)) {
+    module_disable(array('ckeditor_link'));
+    drupal_set_message(t('<em>CKEditor Link</em> has been disabled. <a href="!url">Clean URLs</a> need to be enabled for this module to work properly.', array('!url' => url('admin/config/search/clean-urls'))), 'warning');
+  }
+}
+
+/**
+ * Implementation of hook_permission().
+ */
+function ckeditor_link_permission() {
+  return array('access ckeditor link' => array('title' => t('Access <em>CKEditor Link</em>')));
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function ckeditor_link_menu() {
+  $items['ckeditor_link/autocomplete'] = array(
+    'page callback' => 'ckeditor_link_autocomplete',
+    'access arguments' => array('access ckeditor link'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function ckeditor_link_autocomplete($string = '') {
+  $matches = array();
+
+  if ($string !== '') {
+    $query = db_select('node', 'n')
+      ->fields('n', array('nid', 'title'))
+      ->condition('n.title', '%'. $string .'%', 'LIKE')
+      ->orderBy('n.title')
+      ->orderBy('n.type')
+      ->range(0, 10)
+      ->addTag('node_access');
+    $result = $query->execute();
+    foreach ($result as $node) {
+      $matches[$node->title .' (node/'. $node->nid. ')'] = '<div class="reference-autocomplete">'. check_plain($node->title) .'</div>';
+    }
+  }
+
+  drupal_json_output($matches);
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function ckeditor_link_form_alter(&$form, &$form_state) {
+  if (user_access('access ckeditor link')) {
+    $form['#after_build'][] = 'ckeditor_link_process_form';
+  }
+}
+
+function ckeditor_link_process_form(&$form, &$form_state) {
+  static $added = FALSE;
+  if (!$added && ($js = drupal_add_js()) && isset($js['settings']['data'])) {
+    $settings = call_user_func_array('array_merge_recursive', $js['settings']['data']);
+    if (isset($settings['ckeditor']) || isset($settings['wysiwyg']['configs']['ckeditor'])) {
+      drupal_add_css(drupal_get_path('module', 'ckeditor_link') .'/ckeditor_link.css');
+      drupal_add_js('misc/autocomplete.js');
+      drupal_add_js(array('ckeditor_link' => array(
+        'module_path' => base_path() . drupal_get_path('module', 'ckeditor_link'),
+        'autocomplete_path' => url('ckeditor_link/autocomplete'),
+        'msg_invalid_path' => t('Link must be a valid Drupal path.'),
+      )), 'setting');
+      $added = TRUE;
+    }
+  }
+  return $form;
+}
+
+/**
+ * Implementation of hook_wysiwyg_plugin().
+ */
+function ckeditor_link_wysiwyg_plugin($editor, $version) {
+  if (($editor == 'ckeditor') && user_access('access ckeditor link')) {
+    return array('drupal_path' => array(
+      'path' => drupal_get_path('module', 'ckeditor_link') .'/plugins/link/',
+      'load' => TRUE,
+      'extensions' => array('Link' => t('CKEditor Link')),
+    ));
+  }
+}
+
+/**
+ * Implementation of hook_filter_info().
+ */
+function ckeditor_link_filter_info() {
+  $filters['ckeditor_link_filter'] = array(
+    'title' => t('CKEditor Link Filter'),
+    'description' => t('Converts links added through <em>CKEditor Link</em> into aliased and language prefixed URLs.'),
+    'process callback' => 'ckeditor_link_filter_process',
+  );
+  return $filters;
+}
+
+function ckeditor_link_filter_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+  return preg_replace_callback('`\bhref="'. preg_quote(base_path(), '`') .'node/(\d+)(?=[?#"])`', '_ckeditor_link_filter_process', $text);
+}
+
+function _ckeditor_link_filter_process($matches) {
+  $nid = $matches[1];
+  $options = array();
+
+  $lang = db_query('SELECT language FROM {node} WHERE nid = :nid', array(':nid' => $nid))->fetchField();
+  if ($lang && ($lang != LANGUAGE_NONE)) {
+    $languages = language_list('enabled');
+    $languages = $languages[1];
+    if (isset($languages[$lang])) {
+      $options['language'] = $languages[$lang];
+    }
+  }
+
+  return 'href="'. url("node/$nid", $options);
+}

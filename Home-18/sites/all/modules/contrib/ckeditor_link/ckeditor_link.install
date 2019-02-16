@@ -1,0 +1,12 @@
+<?php
+// $Id: ckeditor_link.install,v 1.2 2010/12/29 18:13:02 anrikun Exp $
+
+/**
+ * Implementation of hook_install().
+ */
+function ckeditor_link_install() {
+  db_update('system')
+    ->fields(array('weight' => 1))
+    ->condition('name', 'ckeditor_link')
+    ->execute();
+}
