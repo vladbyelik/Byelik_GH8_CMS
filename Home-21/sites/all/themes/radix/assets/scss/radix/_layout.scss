@@ -1,0 +1,171 @@
+// Layout
+// --------------------------------------------------
+.container {
+  .container,
+  .container-fluid {
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+#footer {
+  margin: 36px 0;
+}
+
+header {
+  padding: 55px 0 255px;
+  background-image: url(../img/bgrnd1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  h2 {
+    text-align: center;
+    color: #949494;
+    line-height: 30px;
+    margin-bottom: 64px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.design-code {
+  background-image: url(../img/design.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 170px 0;
+
+}
+
+.what-we-do {
+    padding: 104px 0;
+  h2 {
+    color: #000000;
+    line-height: 36px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.about-us {
+  background-image: url(../img/bgrnd-aboutus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 116px 0;
+}
+
+.navbar-default {
+  border: none;
+  background: none;
+}
+
+.map {
+  background-image: url(../img/map.png);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+
+footer {
+  padding: 66px 0;
+  height: 700px;
+}
+
+.link {
+  width: 205px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  background-image: linear-gradient(74deg, #49007c 0%, #e70088 100%);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  line-height: 36px;
+  margin-top: 220px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#main-menu li a {
+  line-height: 24px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.region-button {
+  margin: 0 auto;
+}
+
+.contextual-links-trigger {
+  text-decoration: none;
+  color: #FFFFFF;
+  :hover {
+      text-decoration: none;
+    }
+}
+
+.mouse {
+  background-image: url(../img/mouse.png);
+  width: 25px;
+  height: 43px;
+  margin: 419px auto 0;
+}
+
+.scroll {
+  color: #ffffff;
+  line-height: 18px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+}
+
+.best {
+  display: flex;
+  justify-content: space-between;
+}
+
+.best-design-code {
+  color: #ffffff;
+  width: 510px;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  h2 {
+    width: 237px;
+    height: 42px;
+    line-height: 36px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.span {
+  line-height: 30px;
+  margin-bottom: 41px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
