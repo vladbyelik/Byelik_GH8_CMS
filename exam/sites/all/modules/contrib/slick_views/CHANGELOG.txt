@@ -1,0 +1,8 @@
+
+Slick views 7.x-3.0-dev, 2019-02-02
+-----------------------------------
+- Updated the deprecated Slick Views options to migrate from Slick 2.x to 3.x.
+- Removed slick-views.tpl.php for theme_slick_wrapper().<br>
+- Removed slick_views.theme.inc for slick.theme.inc.<br>
+- Removed SlickViews.inc for Drupal\slick_views\Plugin\views\style\SlickViews.
+- Intial commit.
